@@ -1,0 +1,16 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: doggonetrash.com
+        description: address bar in Google Chrome
+        action: click
+  - prompt: Assert that the "View Services" button is visible.
+    commands:
+      - command: assert
+        expect: the "View Services" button is visible
+      - command: hover-text
+        text: View Services
+        description: button to view services on the homepage
+        action: click
