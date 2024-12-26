@@ -1,0 +1,18 @@
+version: 4.1.32
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      Assert that the navigation menu with items "Home", "About", "Services",
+      "How It Works", "Testimonials", "Resources" is visible.
+    commands:
+      - command: assert
+        expect: >-
+          the navigation menu with items "Home", "About", "Services", "How It
+          Works", "Testimonials", "Resources" is visible
+      - command: hover-text
+        text: Home
+        description: navigation menu item Home
+        action: click
